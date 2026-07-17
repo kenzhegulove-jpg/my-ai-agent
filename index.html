@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Ассистент</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Верхняя плашка настроек -->
+    <header class="settings-bar">
+      <div class="settings-bar__title">AI Ассистент</div>
+
+      <div class="settings-bar__controls">
+        <label class="settings-bar__label" for="mode-select">Режим:</label>
+        <select id="mode-select" class="settings-bar__select">
+          <option value="local">Локальный (Ollama)</option>
+          <option value="api">Внешний API</option>
+        </select>
+
+        <div id="api-key-wrapper" class="settings-bar__api-key hidden">
+          <input
+            type="password"
+            id="api-key-input"
+            class="settings-bar__input"
+            placeholder="Введите API-ключ"
+            autocomplete="off"
+          >
+        </div>
+
+        <button id="clear-chat-button" class="settings-bar__clear-btn" type="button" title="Удалить всю историю переписки">
+          Очистить чат
+        </button>
+      </div>
+    </header>
+
+    <!-- Основная область чата -->
+    <main class="chat">
+      <div id="chat-messages" class="chat__messages">
+        <div class="message message--bot">
+          <div class="message__bubble">
+            Привет! Я ваш AI-ассистент. Выберите режим работы вверху и напишите сообщение ниже.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Нижняя панель ввода -->
+    <footer class="input-bar">
+      <textarea
+        id="message-input"
+        class="input-bar__textarea"
+        placeholder="Напишите сообщение..."
+        rows="1"
+      ></textarea>
+      <button id="send-button" class="input-bar__send" type="button" aria-label="Отправить">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 20L21 12L3 4V10L16 12L3 14V20Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </footer>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
