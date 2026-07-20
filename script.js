@@ -9,7 +9,7 @@
   };
 
   const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-  const API_MODEL = 'mixtral-8x7b-32768';
+  const API_MODEL = 'llama-3.3-70b-versatile';
 
   // Сколько последних сообщений истории отправлять модели для контекста
   const HISTORY_LIMIT = 10;
