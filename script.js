@@ -9,7 +9,7 @@
   };
 
   const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-  const API_MODEL = 'qwen-2.5-coder-32b';
+  const API_MODEL = 'mixtral-8x7b-32768';
 
   // Сколько последних сообщений истории отправлять модели для контекста
   const HISTORY_LIMIT = 10;
